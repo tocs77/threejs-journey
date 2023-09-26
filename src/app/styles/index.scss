@@ -1,0 +1,73 @@
+@font-face {
+  font-family: Roboto;
+  src: local('RobotoCondensed-Regular.ttf'), url('./shared/assets/fonts/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: local('Montserrat-Regular.ttf'), url('./shared/assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: local('Montserrat-Regular.ttf'), url('./shared/assets/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: local('MontserratAlternates-Regular.ttf'), url('./shared/assets/fonts/MontserratAlternates-Regular.ttf') format('truetype');
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat-Medium, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  scrollbar-width: thin;
+}
+
+:root {
+  --dark-bg-redesigned: #fff3d6;
+  --bg-redesigned: #f0c048;
+  --light-bg-redesigned: #f2d791;
+  --text-redesigned: #1b1311;
+  --hint-redesigned: #b8b2a2;
+  --cancel-redesigned: #ff5e5e;
+  --save-redesigned: #52fa81;
+  --icon-redesigned: #4875f0;
+  --accent-redesigned: #1d59ff;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background: var(--active-text-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-text-color);
+  border-radius: 20px;
+  border: 3px solid var(--active-text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

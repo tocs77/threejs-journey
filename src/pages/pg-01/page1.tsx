@@ -10,23 +10,23 @@ export const Page1 = () => {
     const [hovered, hover] = useState(false);
     const [clicked, click] = useState(false);
     // Subscribe this component to the render-loop, rotate the mesh every frame
-    useFrame((state, delta) => (ref.current!.rotation.x += delta));
+    useFrame((_, delta) => (ref.current!.rotation.x += delta));
     // Return the view, these are regular Threejs elements expressed in JSX
     return (
       <mesh
         {...props}
         ref={ref}
         scale={clicked ? 1.5 : 1}
-        onClick={(event) => click(!clicked)}
-        onPointerOver={(event) => hover(true)}
-        onPointerOut={(event) => hover(false)}>
+        onClick={() => click(!clicked)}
+        onPointerOver={() => hover(true)}
+        onPointerOut={() => hover(false)}>
         <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+        <meshStandardMaterial color={hovered ? 'green' : 'red'} />
       </mesh>
     );
   };
   return (
-    <Canvas>
+    <Canvas style={{ width: 800, height: 600 }}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Box position={[-1.2, 0, 0]} />

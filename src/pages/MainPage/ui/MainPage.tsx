@@ -1,3 +1,9 @@
+import classes from './MainPage.module.scss';
+import { PageLinks } from '@/widgets/PageLinks/ui/PageLinks';
 export const MainPage = () => {
-  return <h1>Main page</h1>;
+  return (
+    <div className={classes.mainPage}>
+      <PageLinks />
+    </div>
+  );
 };
