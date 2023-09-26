@@ -1,0 +1,149 @@
+.Button {
+  cursor: pointer;
+  padding: 8px 15px;
+  transition: opacity 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+
+  .addonLeft,
+  .addonRight {
+    display: flex;
+
+    svg {
+      color: var(--hint-redesigned);
+    }
+  }
+}
+
+.withAddon {
+  padding: 0 8px;
+}
+
+.m {
+  font: var(--font-m-redesigned);
+}
+
+.l {
+  font: var(--font-l-redesigned);
+}
+
+.xl {
+  font: var(--font-xl-redesigned);
+}
+
+.clear,
+.clearInverted {
+  padding: 0;
+  background: none;
+}
+
+.clearInverted {
+  color: var(--inverted-primary-color);
+}
+
+.outline {
+  background: none;
+  border: 1px solid;
+}
+
+.outline_warning {
+  background: none;
+  border: 1px solid var(--error-color-light);
+  color: var(--primary-color);
+}
+
+.background {
+  background-color: var(--light-bg-redesigned);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 34px;
+}
+
+.backgroundInverted {
+  background-color: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+  border: none;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.square {
+  padding: 0;
+  display: flex;
+  flex-grow: 0;
+
+  &.m {
+    width: var(--font-line-m);
+    height: var(--font-line-m);
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.l {
+    width: var(--font-line-l);
+    height: var(--font-line-l);
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.xl {
+    width: var(--font-line-xl);
+    height: var(--font-line-xl);
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.normal {
+  color: var(--text-redesigned);
+  border-color: var(--icon-redesigned);
+
+  &:hover {
+    color: var(--accent-redesigned);
+    border-color: var(--accent-redesigned);
+
+    .addonLeft,
+    .addonRight {
+      svg {
+        color: var(--accent-redesigned);
+      }
+    }
+  }
+}
+
+.success {
+  color: var(--save-redesigned);
+
+  &:hover {
+    color: var(--accent-redesigned);
+    border-color: var(--accent-redesigned);
+
+    .addonLeft,
+    .addonRight {
+      svg {
+        color: var(--accent-redesigned);
+      }
+    }
+  }
+}
+
+.error {
+  color: var(--cancel-redesigned);
+
+  &:hover {
+    color: var(--accent-redesigned);
+    border-color: var(--accent-redesigned);
+
+    .addonLeft,
+    .addonRight {
+      svg {
+        color: var(--accent-redesigned);
+      }
+    }
+  }
+}
