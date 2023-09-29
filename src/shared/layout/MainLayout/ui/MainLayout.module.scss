@@ -1,18 +1,16 @@
 .mainLayout {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
   --header-height: 3rem;
+
+  display: grid;
+  grid-template-rows: var(--header-height) calc(100vh - 4rem);
+  overflow: hidden;
 }
 
 .headerContainer {
-  height: var(--header-height);
-  width: 100%;
+  overflow: hidden;
 }
 
 .contentContainer {
-  height: calc(100% - var(--header-height));
-  width: 95%;
-  padding: 1rem;
+  padding: 0.5rem;
+  overflow: hidden;
 }

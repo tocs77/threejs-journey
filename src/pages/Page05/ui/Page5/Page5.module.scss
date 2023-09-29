@@ -1,0 +1,17 @@
+.Page5 {
+  background-color: black;
+  color: var(--text-color-redesigned);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  height: 3rem;
+  gap: 2rem;
+
+  .label,
+  .value {
+    font-size: 1.3rem;
+  }
+}
