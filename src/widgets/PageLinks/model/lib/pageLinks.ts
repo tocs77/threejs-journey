@@ -1,5 +1,13 @@
 import type { PageLink } from '../types/PageLink';
-import { getRoutePg1, getRoutePg2, getRoutePg3, getRoutePg4, getRoutePg5, getRoutePg6 } from '@/app/providers/router/lib/routes';
+import {
+  getRoutePg1,
+  getRoutePg2,
+  getRoutePg3,
+  getRoutePg4,
+  getRoutePg5,
+  getRoutePg6,
+  getRoutePg7,
+} from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
 import Pg2Img from '@/shared/assets/images/02img.png';
@@ -16,4 +24,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg4Img, to: getRoutePg4(), title: 'Basic camera' },
   { image: Pg5Img, to: getRoutePg5(), title: 'Basic geometry' },
   { image: Pg6Img, to: getRoutePg6(), title: 'Debug GUI' },
+  { image: NoImage, to: getRoutePg7(), title: 'Textures' },
 ];
