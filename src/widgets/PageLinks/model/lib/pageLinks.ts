@@ -15,6 +15,7 @@ import Pg3Img from '@/shared/assets/images/03img.png';
 import Pg4Img from '@/shared/assets/images/04img.png';
 import Pg5Img from '@/shared/assets/images/05img.png';
 import Pg6Img from '@/shared/assets/images/06img.png';
+import Pg7Img from '@/shared/assets/images/07img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -24,5 +25,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg4Img, to: getRoutePg4(), title: 'Basic camera' },
   { image: Pg5Img, to: getRoutePg5(), title: 'Basic geometry' },
   { image: Pg6Img, to: getRoutePg6(), title: 'Debug GUI' },
-  { image: NoImage, to: getRoutePg7(), title: 'Textures' },
+  { image: Pg7Img, to: getRoutePg7(), title: 'Textures' },
 ];

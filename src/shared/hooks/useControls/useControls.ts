@@ -37,7 +37,6 @@ export const useControls = (controls: Controls) => {
   const valuesRef = useRef<{ [controlName: keyof typeof controls]: any }>();
 
   useEffect(() => {
-    console.log('called hook use effect');
     const defaultValues: { [controlName: keyof typeof controls]: any } = {};
     for (const controlName of Object.keys(controls)) {
       const control = controls[controlName];
