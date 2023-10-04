@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min';
 
-type ControlTypes = 'color' | 'range' | 'boolean';
+type ControlTypes = 'color' | 'range' | 'boolean' | 'options';
 
 interface BaseControl {
   type: ControlTypes;
@@ -26,7 +26,13 @@ interface BooleanControl extends BaseControl {
   value: boolean;
 }
 
-export type Control = ColorControl | RangeControl | BooleanControl;
+interface OptionsControl extends BaseControl {
+  type: 'options';
+  value: string;
+  options: string[];
+}
+
+export type Control = ColorControl | RangeControl | BooleanControl | OptionsControl;
 
 export interface Controls {
   [controlName: string]: Control;
@@ -81,6 +87,11 @@ export const useControls = (controls: Controls) => {
             .name(control.name)
             .onChange((val) => updateValues(controlName, val));
           break;
+        case 'options':
+          gui
+            .add(control, 'value', control.options)
+            .name(control.name)
+            .onChange((val) => updateValues(controlName, val));
       }
     }
 

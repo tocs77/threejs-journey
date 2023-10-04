@@ -51,7 +51,7 @@ export const Page7 = () => {
 
   return (
     <Canvas className={classes.Page7} dpr={1} camera={{ position: [0, 0, 5], fov: 50 }}>
-      <OrbitControls />
+      <OrbitControls zoomSpeed={0.5} zoomToCursor={true} />
       <Suspense fallback={<BasicBox />}>
         <TexturedBox
           colorTexture={controlValues.showColorMap ? colorImg : null}
