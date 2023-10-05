@@ -8,6 +8,7 @@ declare module '*.scss' {
 
 declare module '*.jpg';
 declare module '*.png';
+declare module '*.json';
 declare module '*.svg' {
   import React = require('react');
   const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
