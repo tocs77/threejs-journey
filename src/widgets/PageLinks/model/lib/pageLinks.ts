@@ -1,6 +1,7 @@
 import type { PageLink } from '../types/PageLink';
 import {
   getRoutePg1,
+  getRoutePg10,
   getRoutePg2,
   getRoutePg3,
   getRoutePg4,
@@ -20,6 +21,7 @@ import Pg6Img from '@/shared/assets/images/06img.png';
 import Pg7Img from '@/shared/assets/images/07img.png';
 import Pg8Img from '@/shared/assets/images/08img.png';
 import Pg9Img from '@/shared/assets/images/09img.png';
+import Pg10Img from '@/shared/assets/images/10img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -32,4 +34,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg7Img, to: getRoutePg7(), title: 'Textures' },
   { image: Pg8Img, to: getRoutePg8(), title: 'Materials' },
   { image: Pg9Img, to: getRoutePg9(), title: 'Text geometry' },
+  { image: Pg10Img, to: getRoutePg10(), title: 'Lightning' },
 ];
