@@ -11,6 +11,7 @@ import {
   getRoutePg8,
   getRoutePg9,
   getRoutePg11,
+  getRoutePg12,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -24,6 +25,7 @@ import Pg8Img from '@/shared/assets/images/08img.png';
 import Pg9Img from '@/shared/assets/images/09img.png';
 import Pg10Img from '@/shared/assets/images/10img.png';
 import Pg11Img from '@/shared/assets/images/11img.png';
+import Pg12Img from '@/shared/assets/images/12img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -38,4 +40,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg9Img, to: getRoutePg9(), title: 'Text geometry' },
   { image: Pg10Img, to: getRoutePg10(), title: 'Lightning' },
   { image: Pg11Img, to: getRoutePg11(), title: 'Shadows' },
+  { image: Pg12Img, to: getRoutePg12(), title: 'Haunted House' },
 ];
