@@ -10,6 +10,7 @@ import {
   getRoutePg7,
   getRoutePg8,
   getRoutePg9,
+  getRoutePg11,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -22,6 +23,7 @@ import Pg7Img from '@/shared/assets/images/07img.png';
 import Pg8Img from '@/shared/assets/images/08img.png';
 import Pg9Img from '@/shared/assets/images/09img.png';
 import Pg10Img from '@/shared/assets/images/10img.png';
+import Pg11Img from '@/shared/assets/images/11img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -35,4 +37,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg8Img, to: getRoutePg8(), title: 'Materials' },
   { image: Pg9Img, to: getRoutePg9(), title: 'Text geometry' },
   { image: Pg10Img, to: getRoutePg10(), title: 'Lightning' },
+  { image: Pg11Img, to: getRoutePg11(), title: 'Shadows' },
 ];
