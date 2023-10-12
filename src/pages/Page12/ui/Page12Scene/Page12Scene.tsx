@@ -1,17 +1,16 @@
 import { useRef } from 'react';
+import { useTexture } from '@react-three/drei';
+import { PointLight, RepeatWrapping, Texture } from 'three';
+import { useFrame } from '@react-three/fiber';
 
 import { useControls } from '@/shared/hooks/useControls';
 import { House } from '@/entities/House';
-
 import floorColorTexture from '@/shared/assets/textures/grass/color.jpg';
 import floorAmbientOcclusionTexture from '@/shared/assets/textures/grass/ambientOcclusion.jpg';
 import floorNormalTexture from '@/shared/assets/textures/grass/normal.jpg';
 import floorRoughnessTexture from '@/shared/assets/textures/grass/roughness.jpg';
 
 import { controls } from './Scene12Controls';
-import { useTexture } from '@react-three/drei';
-import { PointLight, RepeatWrapping, Texture } from 'three';
-import { useFrame } from '@react-three/fiber';
 
 export const Page12Scene = () => {
   const controlValues = useControls(controls);

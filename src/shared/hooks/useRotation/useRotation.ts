@@ -1,9 +1,9 @@
 import { useFrame } from '@react-three/fiber';
 import { MutableRefObject, useMemo } from 'react';
-import { Mesh } from 'three';
+import { Mesh, Points } from 'three';
 
 interface UseRotationProps {
-  meshRef: MutableRefObject<Mesh | null>;
+  meshRef: MutableRefObject<Mesh | null> | MutableRefObject<Points | null>;
   periodX?: number;
   periodY?: number;
   periodZ?: number;
@@ -24,7 +24,7 @@ export const useRotation = (props: UseRotationProps) => {
 
   const speedZ = useMemo(() => {
     if (periodZ === 0) return 0;
-    return (2 * Math.PI) / periodY;
+    return (2 * Math.PI) / periodZ;
   }, []);
 
   useFrame((_, delta) => {
