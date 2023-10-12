@@ -69,9 +69,6 @@ export const Page13Scene = () => {
     case '9':
       texture = colorMap9;
       break;
-    case '9':
-      texture = colorMap9;
-      break;
     case '10':
       texture = colorMap10;
       break;

@@ -101,7 +101,7 @@ export const useControls = (controls: Controls) => {
           gui
             .add(control, 'value', control.min || 0, control.max || 1, control.step || 0.01)
             .name(control.name)
-            .onChange((val) => updateValues(controlName, val));
+            .onFinishChange((val) => updateValues(controlName, val));
           break;
         case 'boolean':
           gui

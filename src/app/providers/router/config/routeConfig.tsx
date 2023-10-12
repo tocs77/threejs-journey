@@ -12,6 +12,7 @@ import { Page10 } from '@/pages/Page10';
 import { Page11 } from '@/pages/Page11';
 import { Page12 } from '@/pages/Page12';
 import { Page13 } from '@/pages/Page13';
+import { Page14 } from '@/pages/Page14';
 import { MainPage } from '@/pages/MainPage';
 
 import {
@@ -30,6 +31,7 @@ import {
   getRoutePg11,
   getRoutePg12,
   getRoutePg13,
+  getRoutePg14,
 } from '../lib/routes';
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -88,5 +90,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.PG13]: {
     path: getRoutePg13(),
     element: <Page13 />,
+  },
+  [AppRoutes.PG14]: {
+    path: getRoutePg14(),
+    element: <Page14 />,
   },
 };
