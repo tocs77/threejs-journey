@@ -15,6 +15,7 @@ import {
   getRoutePg13,
   getRoutePg14,
   getRoutePg15,
+  getRoutePg16,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -50,4 +51,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg13Img, to: getRoutePg13(), title: 'Particles' },
   { image: Pg14Img, to: getRoutePg14(), title: 'Galaxy generator' },
   { image: Pg15Img, to: getRoutePg15(), title: 'Raycaster' },
+  { image: NoImage, to: getRoutePg16(), title: 'Parallax scrolling' },
 ];
