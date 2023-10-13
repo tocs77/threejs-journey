@@ -14,6 +14,7 @@ import {
   getRoutePg12,
   getRoutePg13,
   getRoutePg14,
+  getRoutePg15,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -30,6 +31,7 @@ import Pg11Img from '@/shared/assets/images/11img.png';
 import Pg12Img from '@/shared/assets/images/12img.png';
 import Pg13Img from '@/shared/assets/images/13img.png';
 import Pg14Img from '@/shared/assets/images/14img.png';
+import Pg15Img from '@/shared/assets/images/15img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -47,4 +49,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg12Img, to: getRoutePg12(), title: 'Haunted House' },
   { image: Pg13Img, to: getRoutePg13(), title: 'Particles' },
   { image: Pg14Img, to: getRoutePg14(), title: 'Galaxy generator' },
+  { image: Pg15Img, to: getRoutePg15(), title: 'Raycaster' },
 ];
