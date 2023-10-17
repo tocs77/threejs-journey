@@ -1,14 +1,14 @@
 import { MeshProps } from '@react-three/fiber';
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 
 interface GeometryProps extends MeshProps {
   color?: string;
   amount?: number;
 }
 
-const MAX_VERTICES = 100;
+const MAX_VERTICES = 10000;
 
-export const RandomVertices = (props: GeometryProps) => {
+const RandomVerticesEl = (props: GeometryProps) => {
   const { color = 'red', amount = 50 } = props;
   const [vertices, setVertices] = useState<Float32Array>();
 
@@ -32,3 +32,5 @@ export const RandomVertices = (props: GeometryProps) => {
     </points>
   );
 };
+
+export const RandomVertices = memo(RandomVerticesEl);

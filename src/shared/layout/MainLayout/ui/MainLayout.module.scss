@@ -1,6 +1,4 @@
 .mainLayout {
-  --header-height: 3rem;
-
   display: grid;
   grid-template-rows: var(--header-height) calc(100vh - 4rem);
   overflow: hidden;

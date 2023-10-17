@@ -1,4 +1,3 @@
-import { JsxElement } from 'ts-morph';
 import classes from './MainLayout.module.scss';
 import { ReactNode } from 'react';
 interface MainLayoutProps {

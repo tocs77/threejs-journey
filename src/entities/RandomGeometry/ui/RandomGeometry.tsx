@@ -1,5 +1,5 @@
 import { MeshProps } from '@react-three/fiber';
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 
 interface RandomGeometryProps extends MeshProps {
   amount?: number;
@@ -7,7 +7,7 @@ interface RandomGeometryProps extends MeshProps {
   addColors?: boolean;
 }
 
-export const RandomGeometry = (props: RandomGeometryProps) => {
+const RandomGeometryEl = (props: RandomGeometryProps) => {
   const { amount = 50, radius = 1, addColors = false } = props;
   const [vertices, setVertices] = useState<Float32Array>();
   const [colors, setColors] = useState<Float32Array>();
@@ -43,7 +43,7 @@ export const RandomGeometry = (props: RandomGeometryProps) => {
     }
     setColors(newColors);
   };
-
+  if (!vertices) return null;
   return (
     <bufferGeometry attach='geometry'>
       <bufferAttribute attach='attributes-position' array={vertices} itemSize={3} count={amount} />
@@ -51,3 +51,5 @@ export const RandomGeometry = (props: RandomGeometryProps) => {
     </bufferGeometry>
   );
 };
+
+export const RandomGeometry = memo(RandomGeometryEl);

@@ -33,6 +33,7 @@ import Pg12Img from '@/shared/assets/images/12img.png';
 import Pg13Img from '@/shared/assets/images/13img.png';
 import Pg14Img from '@/shared/assets/images/14img.png';
 import Pg15Img from '@/shared/assets/images/15img.png';
+import Pg16Img from '@/shared/assets/images/16img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -51,5 +52,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg13Img, to: getRoutePg13(), title: 'Particles' },
   { image: Pg14Img, to: getRoutePg14(), title: 'Galaxy generator' },
   { image: Pg15Img, to: getRoutePg15(), title: 'Raycaster' },
-  { image: NoImage, to: getRoutePg16(), title: 'Parallax scrolling' },
+  { image: Pg16Img, to: getRoutePg16(), title: 'Parallax scrolling' },
 ];
