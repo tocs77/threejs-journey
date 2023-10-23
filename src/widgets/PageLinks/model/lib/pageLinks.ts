@@ -37,6 +37,7 @@ import Pg14Img from '@/shared/assets/images/14img.png';
 import Pg15Img from '@/shared/assets/images/15img.png';
 import Pg16Img from '@/shared/assets/images/16img.png';
 import Pg17Img from '@/shared/assets/images/17img.png';
+import Pg18Img from '@/shared/assets/images/18img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -57,5 +58,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg15Img, to: getRoutePg15(), title: 'Raycaster' },
   { image: Pg16Img, to: getRoutePg16(), title: 'Parallax scrolling' },
   { image: Pg17Img, to: getRoutePg17(), title: 'Physics' },
-  { image: NoImage, to: getRoutePg18(), title: 'Models' },
+  { image: Pg18Img, to: getRoutePg18(), title: 'Models' },
 ];

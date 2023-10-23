@@ -9,6 +9,14 @@ declare module '*.scss' {
 declare module '*.jpg';
 declare module '*.png';
 declare module '*.json';
+declare module '*.glb' {
+  const src: string;
+  export default src;
+}
+declare module '*.gltf' {
+  const src: string;
+  export default src;
+}
 declare module '*.svg' {
   import React = require('react');
   const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;

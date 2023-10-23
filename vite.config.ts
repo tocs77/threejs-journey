@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     react(),
     svgr({
-      exportAsDefault: true,
       svgrOptions: { icon: true },
     }),
   ],
@@ -26,6 +25,7 @@ export default defineConfig({
     //   },
     // },
   },
+  assetsInclude: ['**/*.glb', '**/*.gltf'],
   define: {
     __IS_DEV__: JSON.stringify(true),
     __API__: JSON.stringify('http://localhost:3006'),
