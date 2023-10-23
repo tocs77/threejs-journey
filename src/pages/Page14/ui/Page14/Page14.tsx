@@ -7,7 +7,7 @@ import { Page14Scene } from '../Page14Scene/Page14Scene';
 export const Page14 = () => {
   return (
     <Canvas className={classes.Page14} camera={{ position: [4, 2, 5], fov: 75 }}>
-      <OrbitControls zoomSpeed={0.2} />
+      <OrbitControls />
       <Page14Scene />
     </Canvas>
   );
