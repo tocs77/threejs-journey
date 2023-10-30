@@ -1,3 +1,3 @@
 import { lazy } from 'react';
 
-export const HelemetAsync = lazy(() => import('./Helemt'));
+export const HelemetAsync = lazy(() => import('./Helemet'));
