@@ -18,7 +18,7 @@ export const Hamburger = (props: GroupProps) => {
   }, [props.castShadow, props.receiveShadow]);
 
   return (
-    <group position={position} {...other} s>
+    <group position={position} {...other}>
       <primitive object={hamburgerScene} />
     </group>
   );

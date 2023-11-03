@@ -20,6 +20,7 @@ import {
   getRoutePg18,
   getRoutePg19,
   getRoutePg20,
+  getRoutePg21,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -42,6 +43,7 @@ import Pg17Img from '@/shared/assets/images/17img.png';
 import Pg18Img from '@/shared/assets/images/18img.png';
 import Pg19Img from '@/shared/assets/images/19img.png';
 import Pg20Img from '@/shared/assets/images/20img.png';
+import Pg21Img from '@/shared/assets/images/21img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -65,4 +67,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg18Img, to: getRoutePg18(), title: 'Models' },
   { image: Pg19Img, to: getRoutePg19(), title: 'Blender Model' },
   { image: Pg20Img, to: getRoutePg20(), title: 'Render options' },
+  { image: Pg21Img, to: getRoutePg21(), title: 'Complex scene' },
 ];

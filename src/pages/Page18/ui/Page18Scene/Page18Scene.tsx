@@ -20,7 +20,7 @@ export const Page18Scene = () => {
       <ambientLight color={'#fff'} intensity={0.8} />
       <directionalLight color={'#fff'} position={[5, 5, 5]} castShadow intensity={0.9} />
       <primitive object={duckScene} scale={0.5} />
-      <Fox />
+      <Fox scale={0.02} position={[1, 0, 0]} />
       <Suspense>
         <Helemt />
       </Suspense>

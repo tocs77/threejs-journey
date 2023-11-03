@@ -1,1 +1,1 @@
-export { Fox } from './ui/Fox';
+export { FoxAsync as Fox } from './ui/Fox.async';

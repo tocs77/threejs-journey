@@ -3,7 +3,7 @@ import { isMesh, isStandardMAterial } from '@/shared/lib/utils';
 import { useGLTF } from '@react-three/drei';
 import { GroupProps } from '@react-three/fiber';
 import { useEffect } from 'react';
-import { Color, CubeTexture, Material } from 'three';
+import { CubeTexture, Material } from 'three';
 
 interface HelmetProps extends GroupProps {
   envMap?: CubeTexture | null;
@@ -33,6 +33,7 @@ export const HelmetEl = (props: HelmetProps) => {
       s.receiveShadow = Boolean(props.receiveShadow);
     });
   }, [props.castShadow, props.receiveShadow]);
+
   return (
     <group position={position} {...other}>
       <primitive object={helmeScene} scale={3} />

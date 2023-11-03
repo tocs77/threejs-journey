@@ -1,4 +1,5 @@
 import { Controls } from '@/shared/hooks/useControls';
+import { FoxAnimation } from './Fox';
 
 export const controls: Controls = {
   foxFolder: {
@@ -8,7 +9,7 @@ export const controls: Controls = {
       fAnimation: {
         type: 'options',
         name: 'Animation',
-        options: ['Survey', 'Walk', 'Run'],
+        options: ['Survey', 'Walk', 'Run'] as FoxAnimation[],
         value: 'Survey',
       },
     },
