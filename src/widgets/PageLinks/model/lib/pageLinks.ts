@@ -23,6 +23,7 @@ import {
   getRoutePg21,
   getRoutePg22,
   getRoutePg23,
+  getRoutePg24,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -48,6 +49,7 @@ import Pg20Img from '@/shared/assets/images/20img.png';
 import Pg21Img from '@/shared/assets/images/21img.png';
 import Pg22Img from '@/shared/assets/images/22img.png';
 import Pg23Img from '@/shared/assets/images/23img.png';
+import Pg24Img from '@/shared/assets/images/24img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -74,4 +76,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg21Img, to: getRoutePg21(), title: 'Complex scene' },
   { image: Pg22Img, to: getRoutePg22(), title: 'Shaders' },
   { image: Pg23Img, to: getRoutePg23(), title: 'Shader patterns' },
+  { image: Pg24Img, to: getRoutePg24(), title: 'The Sea Shader' },
 ];
