@@ -25,6 +25,7 @@ export enum AppRoutes {
   PG24 = 'pg24',
   PG25 = 'pg25',
   PG26 = 'pg26',
+  PG27 = 'pg27',
   MAIN = 'main',
 }
 
@@ -54,6 +55,7 @@ export const getRoutePg23 = () => '/pg23';
 export const getRoutePg24 = () => '/pg24';
 export const getRoutePg25 = () => '/pg25';
 export const getRoutePg26 = () => '/pg26';
+export const getRoutePg27 = () => '/pg27';
 export const getRouteMain = () => '/';
 
 export const AppRouteByPathPattern: Record<string, AppRoutes> = {
@@ -83,4 +85,5 @@ export const AppRouteByPathPattern: Record<string, AppRoutes> = {
   [getRoutePg24()]: AppRoutes.PG24,
   [getRoutePg25()]: AppRoutes.PG25,
   [getRoutePg26()]: AppRoutes.PG26,
+  [getRoutePg27()]: AppRoutes.PG27,
 };
