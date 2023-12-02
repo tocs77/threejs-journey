@@ -1,5 +1,5 @@
 import { useThree } from '@react-three/fiber';
-import { useRef } from 'react';
+import { useRef, Suspense } from 'react';
 import { CubeTexture } from 'three';
 
 import { useControls } from '@/shared/hooks/useControls';
@@ -12,11 +12,17 @@ import { controls } from './page20SceneControls';
 export const Page20Scene = () => {
   const envMapRef = useRef<CubeTexture | null>(null);
   const controlValues = useControls(controls);
-  const { scene } = useThree();
   const testSphere = (
     <mesh>
       <sphereGeometry args={[0.7, 32, 32]} />
       <meshStandardMaterial envMap={envMapRef.current} envMapIntensity={controlValues.envIntencity} />
+    </mesh>
+  );
+
+  const cube = (
+    <mesh>
+      <boxGeometry args={[2, 2, 2]} />
+      <meshBasicMaterial color={'red'} />
     </mesh>
   );
 
@@ -30,15 +36,18 @@ export const Page20Scene = () => {
         shadow-normalBias={0.03}
       />
       <GraffityBox ref={envMapRef} />
-      <Helemt
-        receiveShadow={controlValues.receiveShadow}
-        castShadow={controlValues.castShadow}
-        scale={2}
-        position={[0, -3, 0]}
-        rotation-y={controlValues.hRotation}
-        envMap={envMapRef.current}
-        envMapIntensity={controlValues.envIntencity}
-      />
+      <Suspense fallback={cube}>
+        <Helemt
+          receiveShadow={controlValues.receiveShadow}
+          castShadow={controlValues.castShadow}
+          scale={2}
+          position={[0, -3, 0]}
+          rotation-y={controlValues.hRotation}
+          envMap={envMapRef.current}
+          envMapIntensity={controlValues.envIntencity}
+        />
+      </Suspense>
+
       <Hamburger
         scale={0.2}
         position={[-2, 0, 0]}

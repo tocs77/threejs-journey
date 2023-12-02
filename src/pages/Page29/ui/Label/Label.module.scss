@@ -1,0 +1,29 @@
+.Label {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0007;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  user-select: none;
+  cursor: default;
+  transform: scale(0, 0);
+
+  .tooltip {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  &:hover .tooltip {
+    opacity: 1;
+  }
+
+  &.visible {
+    transform: scale(1, 1);
+  }
+}

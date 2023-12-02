@@ -9,7 +9,9 @@ export const MainLayout = (props: MainLayoutProps) => {
   return (
     <div className={classes.mainLayout}>
       <nav className={classes.headerContainer}>{header}</nav>
-      <div className={classes.contentContainer}>{content}</div>
+      <div className={classes.contentContainer} id='content'>
+        {content}
+      </div>
     </div>
   );
 };
