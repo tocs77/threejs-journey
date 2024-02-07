@@ -29,6 +29,7 @@ import {
   getRoutePg27,
   getRoutePg28,
   getRoutePg29,
+  getRoutePg30,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -92,4 +93,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg27Img, to: getRoutePg27(), title: 'Postprocessing' },
   { image: Pg28Img, to: getRoutePg28(), title: 'Performance' },
   { image: Pg29Img, to: getRoutePg29(), title: 'Mix HTML' },
+  { image: NoImage, to: getRoutePg30(), title: 'Portal Scene' },
 ];
