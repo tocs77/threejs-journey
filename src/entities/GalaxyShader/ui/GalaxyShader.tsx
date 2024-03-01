@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { AdditiveBlending, Color, IUniform, Material, Points } from 'three';
+import { useFrame } from '@react-three/fiber';
 
 import { useControls } from '@/shared/hooks/useControls';
-
 import { controls } from './galaxyShaderControls';
 import fragmentShader from '../shaders/galaxyFragment.glsl';
 import vertexShader from '../shaders/galaxyVertex.glsl';
-import { useFrame } from '@react-three/fiber';
+
 
 interface GalaxyShaderProps {
   count?: number;
