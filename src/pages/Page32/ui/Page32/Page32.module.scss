@@ -1,0 +1,15 @@
+.Page32 {
+  background-color: rgb(192, 235, 163);
+}
+
+.sphereLabel > div {
+  background-color: #00000088;
+  position: absolute;
+  color: white;
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 30px;
+  user-select: none;
+  width: fit-content;
+}

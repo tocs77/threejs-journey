@@ -31,6 +31,7 @@ import {
   getRoutePg29,
   getRoutePg30,
   getRoutePg31,
+  getRoutePg32,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -64,6 +65,7 @@ import Pg28Img from '@/shared/assets/images/28img.png';
 import Pg29Img from '@/shared/assets/images/29img.png';
 import Pg30Img from '@/shared/assets/images/30img.png';
 import Pg31Img from '@/shared/assets/images/31img.png';
+import Pg32Img from '@/shared/assets/images/32img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -98,4 +100,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg29Img, to: getRoutePg29(), title: 'Mix HTML' },
   { image: Pg30Img, to: getRoutePg30(), title: 'Portal Scene' },
   { image: Pg31Img, to: getRoutePg31(), title: 'Three fiber' },
+  { image: Pg32Img, to: getRoutePg32(), title: 'Three drei' },
 ];
