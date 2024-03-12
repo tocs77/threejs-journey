@@ -67,6 +67,7 @@ import Pg29Img from '@/shared/assets/images/29img.png';
 import Pg30Img from '@/shared/assets/images/30img.png';
 import Pg31Img from '@/shared/assets/images/31img.png';
 import Pg32Img from '@/shared/assets/images/32img.png';
+import Pg33Img from '@/shared/assets/images/33img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -102,5 +103,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg30Img, to: getRoutePg30(), title: 'Portal Scene' },
   { image: Pg31Img, to: getRoutePg31(), title: 'Three fiber' },
   { image: Pg32Img, to: getRoutePg32(), title: 'Three drei' },
-  { image: NoImage, to: getRoutePg33(), title: 'R3f environment' },
+  { image: Pg33Img, to: getRoutePg33(), title: 'R3f environment' },
 ];
