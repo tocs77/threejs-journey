@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useGLTF } from '@react-three/drei';
+import { Clone, useGLTF } from '@react-three/drei';
 import { GroupProps } from '@react-three/fiber';
 
 import hamburgerModel from '@/shared/assets/models/hamburger/hamburger.glb';
@@ -19,7 +19,7 @@ export const Hamburger = (props: GroupProps) => {
 
   return (
     <group position={position} {...other}>
-      <primitive object={hamburgerScene} />
+      <Clone object={hamburgerScene} />
     </group>
   );
 };
