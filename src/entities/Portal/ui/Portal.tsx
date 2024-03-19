@@ -6,11 +6,11 @@ import { Color, IUniform, MeshBasicMaterial, ShaderMaterial, Texture } from 'thr
 import portalModel from '@/shared/assets/models/portal/portal.glb';
 import portalTexture from '@/shared/assets/models/portal/portal.jpg';
 import { isMesh } from '@/shared/lib/utils';
+import { useControls } from '@/shared/hooks/useControls';
 
 import vertexShader from '../shader/portalVertex.glsl';
 import fragmentShader from '../shader/portalFragment.glsl';
 import { controls } from './portalControls';
-import { useControls } from '@/shared/hooks/useControls';
 
 interface PortalUniform extends Record<string, IUniform> {
   uTime: { value: number };

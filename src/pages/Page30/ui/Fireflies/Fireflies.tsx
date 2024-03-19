@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { AdditiveBlending, IUniform, Points } from 'three';
-import { controls } from './firefliesControls';
+import { useFrame } from '@react-three/fiber';
+
 import { useControls } from '@/shared/hooks/useControls';
 
 import vertexShader from '../../shaders/fireflyVertex.glsl';
 import fragmentShader from '../../shaders/fireflyFragemnt.glsl';
-import { useFrame } from '@react-three/fiber';
+import { AdditiveBlending, IUniform, Points } from 'three';
+import { controls } from './firefliesControls';
 
 interface FireflyUniform extends Record<string, IUniform> {
   uPixelRatio: { value: number };
