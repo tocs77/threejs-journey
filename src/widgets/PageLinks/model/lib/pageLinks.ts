@@ -36,6 +36,7 @@ import {
   getRoutePg34,
   getRoutePg35,
   getRoutePg36,
+  getRoutePg37,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -74,6 +75,7 @@ import Pg33Img from '@/shared/assets/images/33img.png';
 import Pg34Img from '@/shared/assets/images/34img.png';
 import Pg35Img from '@/shared/assets/images/35img.png';
 import Pg36Img from '@/shared/assets/images/36img.png';
+import Pg37Img from '@/shared/assets/images/37img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -113,4 +115,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg34Img, to: getRoutePg34(), title: 'R3f models' },
   { image: Pg35Img, to: getRoutePg35(), title: 'R3f text' },
   { image: Pg36Img, to: getRoutePg36(), title: 'R3f events' },
+  { image: Pg37Img, to: getRoutePg37(), title: 'R3f postprocessing' },
 ];

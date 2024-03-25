@@ -1,5 +1,5 @@
 import { forwardRef, useMemo } from 'react';
-import { Color, Uniform, Vector3 } from 'three';
+import { Color, Uniform } from 'three';
 import { Effect } from 'postprocessing';
 import fragmentShader from './tintFragmentShader.glsl';
 
