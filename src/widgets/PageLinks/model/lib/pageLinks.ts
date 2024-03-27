@@ -37,6 +37,7 @@ import {
   getRoutePg35,
   getRoutePg36,
   getRoutePg37,
+  getRoutePg38,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -116,4 +117,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg35Img, to: getRoutePg35(), title: 'R3f text' },
   { image: Pg36Img, to: getRoutePg36(), title: 'R3f events' },
   { image: Pg37Img, to: getRoutePg37(), title: 'R3f postprocessing' },
+  { image: NoImage, to: getRoutePg38(), title: 'Laptop' },
 ];
