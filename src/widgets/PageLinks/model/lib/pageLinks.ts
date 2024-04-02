@@ -38,6 +38,7 @@ import {
   getRoutePg36,
   getRoutePg37,
   getRoutePg38,
+  getRoutePg39,
 } from '@/app/providers/router/lib/routes';
 
 import Pg1Img from '@/shared/assets/images/01img.png';
@@ -77,6 +78,8 @@ import Pg34Img from '@/shared/assets/images/34img.png';
 import Pg35Img from '@/shared/assets/images/35img.png';
 import Pg36Img from '@/shared/assets/images/36img.png';
 import Pg37Img from '@/shared/assets/images/37img.png';
+import Pg38Img from '@/shared/assets/images/38img.png';
+import Pg39Img from '@/shared/assets/images/39img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -117,5 +120,6 @@ export const pageLinks: PageLink[] = [
   { image: Pg35Img, to: getRoutePg35(), title: 'R3f text' },
   { image: Pg36Img, to: getRoutePg36(), title: 'R3f events' },
   { image: Pg37Img, to: getRoutePg37(), title: 'R3f postprocessing' },
-  { image: NoImage, to: getRoutePg38(), title: 'Laptop' },
+  { image: Pg38Img, to: getRoutePg38(), title: 'Laptop' },
+  { image: Pg39Img, to: getRoutePg39(), title: 'R3f phisics' },
 ];
