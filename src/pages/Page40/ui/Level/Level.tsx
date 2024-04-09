@@ -7,7 +7,6 @@ import { BlockSlider } from '../BlockSlider/BlockSlider';
 import { BlockSpinner } from '../BlockSpinner/BlockSpinner';
 import { BlockStart } from '../BlockStart/BlockStart';
 import { Bounds } from '../Bounds/Bounds';
-import { CuboidCollider } from '@react-three/rapier';
 
 interface LevelProps {
   lenght: number;
@@ -82,7 +81,6 @@ export const Level = (props: LevelProps) => {
       {levelBlocks}
       <BlockEnd geometry={boxGeometry} material={floor1Material} position={[0, 0, -SIZE * (lenght + 1)]} />
       <Bounds length={lenght + 2} size={SIZE} geometry={boxGeometry} material={wallMaterial} />
-
     </>
   );
 };
