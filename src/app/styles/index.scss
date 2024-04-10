@@ -20,6 +20,10 @@
   src: local('MontserratAlternates-Regular.ttf'),
     url('../../shared/assets/fonts/MontserratAlternates-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Bebas';
+  src: local('BebasNeue-Regular.ttf'), url('../../shared/assets/fonts/BebasNeue-Regular.ttf') format('truetype');
+}
 
 html {
   font-size: 62.5%;

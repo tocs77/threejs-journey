@@ -5,6 +5,7 @@ import { Camera, Vector3 } from 'three';
 import { RapierRigidBody, RigidBody, useRapier } from '@react-three/rapier';
 
 import { KeyControls } from '../../types/KeyEntries';
+import { useGame } from '../../store/store';
 
 const BALL_SIZE = 0.3;
 
@@ -13,9 +14,19 @@ const smoothedCameraTarget = new Vector3();
 
 export const Player = () => {
   const [subscribeKeys, getKeys] = useKeyboardControls<KeyControls>();
-
   const { rapier, world } = useRapier();
   const playerRef = useRef<RapierRigidBody>();
+  const { setPhase, phase, blockCounts, blockSize } = useGame();
+
+  useEffect(() => {
+    const unsubscribe = useGame.subscribe(
+      (state) => state.phase,
+      (phase) => {
+        if (phase === 'ready') resetPlayerPosition();
+      },
+    );
+    return () => unsubscribe();
+  }, [phase]);
 
   const jumpHandler = () => {
     const origin = playerRef.current.translation();
@@ -29,6 +40,14 @@ export const Player = () => {
   };
 
   useEffect(() => {
+    const unsubscribe = subscribeKeys(() => {
+      if (phase !== 'ready') return;
+      setPhase('playing');
+    });
+    return () => unsubscribe();
+  }, [phase]);
+
+  useEffect(() => {
     const unsubscribeJump = subscribeKeys(
       (state) => state.jump,
       (val: boolean) => {
@@ -37,6 +56,12 @@ export const Player = () => {
     );
     return () => unsubscribeJump();
   }, []);
+
+  const resetPlayerPosition = () => {
+    playerRef.current.setTranslation({ x: 0, y: 1, z: 0 }, true);
+    playerRef.current.setLinvel({ x: 0, y: 0, z: 0 }, true);
+    playerRef.current.setAngvel({ x: 0, y: 0, z: 0 }, true);
+  };
 
   const handleKeyboard = (delta: number) => {
     const { forward, backward, leftward, rightward } = getKeys();
@@ -84,9 +109,20 @@ export const Player = () => {
     camera.lookAt(smoothedCameraTarget);
   };
 
+  const checkEnd = () => {
+    if (phase !== 'playing') return;
+    if (playerRef.current.translation().z < -blockSize * blockCounts + blockSize / 2) setPhase('gameover');
+  };
+
+  const checkFall = () => {
+    if (playerRef.current.translation().y < -4) setPhase('ready');
+  };
+
   useFrame(({ camera }, delta) => {
     handleKeyboard(delta);
     handleCamera(camera, delta);
+    checkEnd();
+    checkFall();
   });
 
   return (
