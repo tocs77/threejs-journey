@@ -14,9 +14,10 @@ export const Page40 = () => {
   return (
     <KeyboardControls map={keyControls}>
       <Canvas className={classes.Page40} shadows='soft' camera={{ fov: 45, near: 0.1, far: 200, position: [2.5, 4, 6] }}>
-        <Perf position='bottom-left' />
+        <color args={['#252731']} attach='background' />
+        {/* <Perf position='bottom-left' /> */}
         <Lights />
-        <Physics debug>
+        <Physics>
           <Page40Scene />
         </Physics>
       </Canvas>

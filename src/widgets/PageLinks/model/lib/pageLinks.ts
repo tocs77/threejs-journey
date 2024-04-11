@@ -81,6 +81,7 @@ import Pg36Img from '@/shared/assets/images/36img.png';
 import Pg37Img from '@/shared/assets/images/37img.png';
 import Pg38Img from '@/shared/assets/images/38img.png';
 import Pg39Img from '@/shared/assets/images/39img.png';
+import Pg40Img from '@/shared/assets/images/40img.png';
 import NoImage from '@/shared/assets/images/no-image.png';
 
 export const pageLinks: PageLink[] = [
@@ -123,5 +124,5 @@ export const pageLinks: PageLink[] = [
   { image: Pg37Img, to: getRoutePg37(), title: 'R3f postprocessing' },
   { image: Pg38Img, to: getRoutePg38(), title: 'Laptop' },
   { image: Pg39Img, to: getRoutePg39(), title: 'R3f phisics' },
-  { image: NoImage, to: getRoutePg40(), title: 'Ball game' },
+  { image: Pg40Img, to: getRoutePg40(), title: 'Ball game' },
 ];

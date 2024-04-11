@@ -16,7 +16,7 @@ export const Player = () => {
   const [subscribeKeys, getKeys] = useKeyboardControls<KeyControls>();
   const { rapier, world } = useRapier();
   const playerRef = useRef<RapierRigidBody>();
-  const { setPhase, phase, blockCounts, blockSize } = useGame();
+  const { setPhase, phase, blockCounts, blockSize, setStartTime, setEndTime } = useGame();
 
   useEffect(() => {
     const unsubscribe = useGame.subscribe(
@@ -43,6 +43,7 @@ export const Player = () => {
     const unsubscribe = subscribeKeys(() => {
       if (phase !== 'ready') return;
       setPhase('playing');
+      setStartTime(Date.now());
     });
     return () => unsubscribe();
   }, [phase]);
@@ -64,6 +65,7 @@ export const Player = () => {
   };
 
   const handleKeyboard = (delta: number) => {
+    if (phase !== 'playing') return;
     const { forward, backward, leftward, rightward } = getKeys();
     const impulse = { x: 0, y: 0, z: 0 };
     const torque = { x: 0, y: 0, z: 0 };
@@ -111,7 +113,10 @@ export const Player = () => {
 
   const checkEnd = () => {
     if (phase !== 'playing') return;
-    if (playerRef.current.translation().z < -blockSize * blockCounts + blockSize / 2) setPhase('gameover');
+    if (playerRef.current.translation().z < -blockSize * blockCounts - blockSize / 2) {
+      setPhase('gameover');
+      setEndTime(Date.now());
+    }
   };
 
   const checkFall = () => {

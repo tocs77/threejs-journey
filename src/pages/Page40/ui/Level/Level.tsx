@@ -18,7 +18,7 @@ const blocks = ['spinner', 'chopper', 'slider'] as const;
 
 export const Level = (props: LevelProps) => {
   const { lenght, difficulty } = props;
-  const { blockSize } = useGame();
+  const { blockSize, blockSeed } = useGame();
 
   const levelBlocks = useMemo(() => {
     const levelBlocks: JSX.Element[] = [];
@@ -73,7 +73,7 @@ export const Level = (props: LevelProps) => {
       }
     }
     return levelBlocks;
-  }, []);
+  }, [blockSeed]);
 
   return (
     <>
